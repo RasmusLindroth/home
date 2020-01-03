@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+service HomeService {
+    rpc RunAction(RunActionRequest) returns (RunActionResponse) {}
+}
+
+message RunActionRequest {
+    string room = 1;
+    string lamp = 2;
+    string action = 3;
+    string value = 4;
+}
+
+message RunActionResponse {}
