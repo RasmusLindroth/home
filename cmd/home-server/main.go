@@ -39,7 +39,7 @@ func main() {
 		conf.IKEA.PSK,
 	)
 
-	lis, err := net.Listen("tcp", conf.GetAddress())
+	lis, err := net.Listen("tcp", conf.GetAddressWithoutHost())
 	if err != nil {
 		log.Fatalf("failed to listen: %v", err)
 	}

@@ -26,6 +26,10 @@ func (c Config) GetAddress() string {
 	return fmt.Sprintf("%s:%s", c.Server.Host, c.Server.Port)
 }
 
+func (c Config) GetAddressWithoutHost() string {
+	return fmt.Sprintf(":%s", c.Server.Port)
+}
+
 func ParseConfig() (Config, error) {
 	confFile, ok := os.LookupEnv("XDG_CONFIG_HOME")
 	conf := Config{}
