@@ -5,6 +5,6 @@ services:
         image: home-server:latest
         restart: always
         volumes:
-        - /home/rasmus/.config/gohome.yaml:/.config/gohome.yaml
+            - /home/rasmus/.config/gohome.yaml:/.config/gohome.yaml
         ports:
-        - 50051:50051
+            - 50051:50051
