@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+    home-server:
+        image: home-server:latest
+        volumes:
+        - /home/rasmus/.config/gohome.yaml:/.config/gohome.yaml
+        ports:
+        - 50051:50051
